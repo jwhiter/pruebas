@@ -21,8 +21,11 @@ jobs:
         with:
           java-version: 11
 
-      - name: Build proyect with Maven
-        run: mvn -B package
+      - name: Ejecucion Test Unitarios
+        run: mvn -B '-Dtest=test.java.es.urjc.code.daw.library.unitary.*Test' test
+
+      - name: Ejecucion Test API REST
+        run: mvn -B '-Dtest=test.java.es.urjc.code.daw.library.rest.*Test' test
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
