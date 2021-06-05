@@ -1,8 +1,8 @@
 name: por la noche
 
 on: 
-  push:
-     
+  schedule:
+    - cron : 5 23 * * *
     branches:
       - develop
     
