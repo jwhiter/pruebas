@@ -16,16 +16,16 @@ jobs:
       - name: Checkout commit
         uses: actions/checkout@v2
 
-      - name: Set uo JDK 11
+      - name: Set on JDK 11
         uses: actions/setup-java@v1
         with:
           java-version: 11
 
       - name: Ejecucion Test Unitarios
-        run: mvn -B '-Dtest=test.java.es.urjc.code.daw.library.unitary.*Test' test
+        run: mvn -B '-Dtest=es.urjc.code.daw.library.unitary.*Test' test
 
       - name: Ejecucion Test API REST
-        run: mvn -B '-Dtest=test.java.es.urjc.code.daw.library.rest.*Test' test
+        run: mvn -B '-Dtest=es.urjc.code.daw.library.rest.*Test' test
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
