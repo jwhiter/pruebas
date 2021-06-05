@@ -1,0 +1,32 @@
+name: primer workflow
+
+on: 
+  commit:
+    branches:
+      - develop
+    
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout commit
+        uses: actions/checkout@v2
+
+      - name: Set uo JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: Build proyect with Maven
+        run: mvn -B package
+
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: target
+          path: target/*.jar
+          retention-days: 1
