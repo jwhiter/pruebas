@@ -1,9 +1,10 @@
-name: primer workflow
+name: commit en develop
 
 on: 
-  deployment:
+  check_run:
     branches:
       - develop
+    types: completed
     
 jobs:
 
