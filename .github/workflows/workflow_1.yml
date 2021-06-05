@@ -23,3 +23,10 @@ jobs:
 
       - name: Build proyect with Maven
         run: mvn -B package
+
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: target
+          path: target/*.jar
+          retention-days: 1
