@@ -25,7 +25,7 @@ jobs:
         run: mvn -B '-Dtest=es.urjc.code.daw.library.unitary.*Test' test
 
       - name: Ejecucion Test API REST
-        run: mvn -B '-Dtest=es.urjc.code.daw.library.rest.*Test' test
+        run: mvn -B '-Dtest=es.urjc.code.daw.library.e2e.rest.*Test' test
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
