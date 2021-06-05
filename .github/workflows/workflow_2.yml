@@ -1,4 +1,4 @@
-name: primer workflow
+name: commit en develop
 
 on: 
   deployment:
