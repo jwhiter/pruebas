@@ -1,7 +1,7 @@
 name: primer workflow
 
 on: 
-  create:
+  deployment:
     branches:
       - develop
     
