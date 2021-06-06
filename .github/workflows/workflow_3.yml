@@ -1,9 +1,8 @@
 name: por la noche
 
 on: 
-  triggers:
-      - cron:
-          schedule: every 2 mins
+  schedule:
+    - cron: '*/2 * * * *'
     branches:
       - develop
     
