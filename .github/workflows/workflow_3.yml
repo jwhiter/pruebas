@@ -1,10 +1,11 @@
 name: por la noche
 
 on: 
-  - schedule:
-      - cron : '47 13 * * *'
-      - branches:
-        - develop
+  triggers:
+      - schedule:
+          cron: "49 13 * * *" 
+    branches:
+      - develop
     
 jobs:
 
