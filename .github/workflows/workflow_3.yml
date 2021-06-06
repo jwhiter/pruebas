@@ -2,9 +2,9 @@ name: por la noche
 
 on: 
   - schedule:
-      cron : '45 13 * * *'
-    branches:
-      - develop
+      - cron : '47 13 * * *'
+      - branches:
+        - develop
     
 jobs:
 
