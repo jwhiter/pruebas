@@ -3,7 +3,7 @@ name: por la noche
 on: 
   triggers:
       - cron:
-          schedule: "52 13 * * *" 
+          schedule: every 2 mins
     branches:
       - develop
     
