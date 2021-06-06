@@ -1,7 +1,7 @@
 name: commit en develop
 
 on: 
-  check_run:
+  push:
     branches:
       - develop
     
