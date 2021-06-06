@@ -70,11 +70,11 @@ jobs:
         with:
           name: target
       - name: Build Docker Image
-        run: docker build -t dev-20210605.201725 .
+        run: docker build -t items .
       - name: Install Heroku CLI
         run: curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
       - name: Change image name to point to Heroku registry
-        run: docker tag dev-20210605.201725 registry.heroku.com/$HEROKU_APP/web
+        run: docker tag items registry.heroku.com/$HEROKU_APP/web
       - name: Login in Heroku container registry
         run: heroku container:login
       - name: Push image to Heroku Registry
