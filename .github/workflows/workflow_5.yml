@@ -93,6 +93,18 @@ jobs:
         run: heroku container:login
       - name: Deploy to Heroku
         run: heroku container:release web
-    
+
+  ejecutando_smoke_test:
+    name: Smoke test
+    runs-on: ubuntu-latest
+    needs: [deploy_to_heroku]
+    steps:
+      - name: Checkout commit
+        uses:actions/checkout@v2
+      - name: Set up JDK 11
+        uses:actions/set-upjava@v1
+        with:
+          java-version: 11
+
       - name: Ejecucion de test Selenium
         run: mvn -B '-Dtest=es.urjc.code.daw.library.e2e.selenium.*Test' -Dhost="https://ais-practica3.herokuapp.com/" test
