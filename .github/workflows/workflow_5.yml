@@ -52,7 +52,7 @@ jobs:
       - name: Build image
         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/je.blanquer-a.elismaili:v-${{ steps.project.outputs.name }} .
       - name: Push image to DockerHub
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/je.blanquer-a.elismaili-${{ steps.project.outputs.name }}
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/je.blanquer-a.elismaili:v-${{ steps.project.outputs.name }}
 
   publish_in_heroku_registry:
     name: Publish in Heroku Registry
