@@ -93,5 +93,5 @@ jobs:
         run: heroku container:login
       - name: Deploy to Heroku
         run: heroku container:release web
-      -name: Ejecucion de test Selenium
+      - name: Ejecucion de test Selenium
         run: mvn -B '-Dtest=es.urjc.code.daw.library.e2e.selenium.*Test' test
