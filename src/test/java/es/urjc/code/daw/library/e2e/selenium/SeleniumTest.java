@@ -57,8 +57,12 @@ public class SeleniumTest {
 
         // GIVEN: Partiendo de que estamos en la página principal de la libreria
         String host = System.getProperty("host", "localhost"); 
-        this.driver.get("http://"+host+":"+this.port+"/");
-
+        if(host.equals(localhost)){
+            this.driver.get("http://"+host+":"+this.port+"/");
+        }
+        else{
+            this.driver.get("http://" + host+".herokuapp.com");
+        }
 
         // WHEN: Creamos un nuevo libro
 
@@ -79,7 +83,12 @@ public class SeleniumTest {
 
         // GIVEN: Partiendo de que estamos en la página principal de la libreria 
         String host = System.getProperty("host", "localhost"); 
-        this.driver.get("http://"+host+":"+this.port+"/");
+        if(host.equals(localhost)){
+            this.driver.get("http://"+host+":"+this.port+"/");
+        }
+        else{
+            this.driver.get("http://" + host+".herokuapp.com");
+        }
 
         // WHEN: 
         
