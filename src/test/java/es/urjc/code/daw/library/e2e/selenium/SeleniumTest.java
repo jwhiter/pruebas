@@ -57,6 +57,7 @@ public class SeleniumTest {
 
         // GIVEN: Partiendo de que estamos en la página principal de la libreria
         String host = System.getProperty("host", "localhost"); 
+        System.out.println(host);
         this.driver.get(host+this.port+"/");
 
 
