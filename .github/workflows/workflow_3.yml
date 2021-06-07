@@ -1,8 +1,11 @@
 name: por la noche
 
 on: 
-  schedule:
-    - cron: '0 22 * * *'
+  # schedule:
+  #  - cron: '0 22 * * *'
+  push:
+    branches:
+      - master
     
     
 jobs:

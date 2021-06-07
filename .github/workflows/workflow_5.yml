@@ -4,7 +4,7 @@ name: despliegue heroku
 on:  
   push: 
     branches:
-      - master
+      - develop
     
 jobs:
 
