@@ -57,7 +57,7 @@ public class SeleniumTest {
 
         // GIVEN: Partiendo de que estamos en la página principal de la libreria
         String host = System.getProperty("host", "localhost"); 
-        if(host.equals(localhost)){
+        if(host.equals("localhost")){
             this.driver.get("http://"+host+":"+this.port+"/");
         }
         else{
@@ -83,7 +83,7 @@ public class SeleniumTest {
 
         // GIVEN: Partiendo de que estamos en la página principal de la libreria 
         String host = System.getProperty("host", "localhost"); 
-        if(host.equals(localhost)){
+        if(host.equals("localhost")){
             this.driver.get("http://"+host+":"+this.port+"/");
         }
         else{
