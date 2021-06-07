@@ -93,6 +93,7 @@ jobs:
         run: heroku container:login
       - name: Deploy to Heroku
         run: heroku container:release web
-      - name: Ejecutando test Selenium
+      - name: Configuracion de host
         run: mvn -Dhost="ais-practica3.com" test
+      -name: Ejecucion de test Selenium
         run: mvn -B '-Dtest=es.urjc.code.daw.library.e2e.selenium.*Test' test
