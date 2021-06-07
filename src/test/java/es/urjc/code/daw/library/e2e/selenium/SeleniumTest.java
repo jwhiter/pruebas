@@ -61,7 +61,7 @@ public class SeleniumTest {
             this.driver.get("http://"+host+":"+this.port+"/");
         }
         else{
-            this.driver.get("http://" + host+".herokuapp.com");
+            this.driver.get(host);
         }
 
         // WHEN: Creamos un nuevo libro
@@ -87,7 +87,7 @@ public class SeleniumTest {
             this.driver.get("http://"+host+":"+this.port+"/");
         }
         else{
-            this.driver.get("http://" + host+".herokuapp.com");
+            this.driver.get(host);
         }
 
         // WHEN: 
