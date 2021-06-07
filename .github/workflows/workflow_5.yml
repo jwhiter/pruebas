@@ -108,3 +108,5 @@ jobs:
 
       - name: Ejecucion de test Selenium
         run: mvn -B '-Dtest=es.urjc.code.daw.library.e2e.selenium.*Test' -Dhost="https://ais-practica3.herokuapp.com/" test
+      - name: Ejecucionde test API REST
+        run: mvn -B '-Dtest=es.urjc.code.daw.library.e2e.rest.*Test' -Dhost="https://ais-practica3.herokuapp.com/" test
