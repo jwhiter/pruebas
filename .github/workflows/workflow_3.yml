@@ -1,11 +1,8 @@
 name: por la noche
 
 on: 
-  # schedule:
-  #  - cron: '0 22 * * *'
-  push:
-    branches:
-      - develop
+   schedule:
+    - cron: '0 22 * * *'
     
     
 jobs:
@@ -55,7 +52,7 @@ jobs:
         with:
           name: target
       - name: Generate tag
-        run: echo ::set-output name=tag::$(date +'%Y%m%d.%H%M%S')
+        run: echo ::set-output name=tag::$(date +'%Y%m%d')
         id: project
       - name: Login to DockerHub
         run: docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" -p "${{ secrets.DOCKERHUB_TOKEN }}"
