@@ -57,8 +57,7 @@ public class SeleniumTest {
 
         // GIVEN: Partiendo de que estamos en la página principal de la libreria
         String host = System.getProperty("host", "localhost"); 
-        System.out.println(host);
-        this.driver.get(host+this.port+"/");
+        this.driver.get("http://"+host+":"+this.port+"/");
 
 
         // WHEN: Creamos un nuevo libro
@@ -78,9 +77,9 @@ public class SeleniumTest {
 	@DisplayName("Borrar un libro y comprobar que no existe")
 	public void deleteBookTest() throws Exception {
 
-        // GIVEN: Partiendo de que estamos en la página principal de la libreria
+        // GIVEN: Partiendo de que estamos en la página principal de la libreria 
         String host = System.getProperty("host", "localhost"); 
-        this.driver.get(host+this.port+"/");
+        this.driver.get("http://"+host+":"+this.port+"/");
 
         // WHEN: 
         
